@@ -14,6 +14,7 @@ app.use(express.json());
 
 const messageStorage = [];
 
+
 bot.on('message', (msg) => {
 
   messageStorage.push({
@@ -60,7 +61,7 @@ app.post('/send-message', (req, res) => {
       date: new Date(),
     });
   
-    const chatId = 1327778298; //1327778297  
+    const chatId = -4651283631; //1327778297  
   
     bot.sendMessage(chatId, `${message}`)
       .then(() => res.status(200).send('Сообщение сохранено и отправлено!'))
